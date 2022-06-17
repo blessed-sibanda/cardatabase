@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
+@RepositoryRestResource
 public interface CarRepository extends PagingAndSortingRepository<Car, Long> {
     List<Car> findByBrand(String brand);
 
